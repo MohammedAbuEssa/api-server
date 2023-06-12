@@ -39,7 +39,7 @@ async function updateSchool(req, res) {
 
 async function deleteSchool(req, res) {
   let schoolId = parseInt(req.params.id);
-  let deleteSchool = await Person.destroy({ where: { id: schoolId } });
+  let deleteSchool = await School.destroy({ where: { id: schoolId } });
   res.status(204).json(deleteSchool);
 }
 
